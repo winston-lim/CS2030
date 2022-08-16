@@ -1,26 +1,28 @@
 # PSET 1: Abstraction and Encapsulation
 ## Question 1
-### Which line(s) voilate the `final` modifier of property x in class P
+### a) Which line(s) voilate the `final` modifier of property x in class P
 Line 17
 
-### Which line(s) voilate the `final` modifier of property x in class P
+### b) Which line(s) voilate the `final` modifier of property x in class P
 Both lines 17 and 21
 The notion of an abstraction barrier is that there should be a separation between implementer and client
 In this case, it means that clients should not have access to properties of the implementor,
 instead they should call a method of the implementor
 
 ## Question 2
-### Do the getX() and getY() methods violate the Tell-Don't-Ask Principle
+### a) Do the getX() and getY() methods violate the Tell-Don't-Ask Principle
 They do not voilate the principle as they are private methods not callable by any client
 
-### `new Vector2D(1.0, 1.0).add(newVector2D(2.0, 2.0))` is executed. Show the content of the stack and heap at line A
+### b) `new Vector2D(1.0, 1.0).add(newVector2D(2.0, 2.0))` is executed. Show the content of the stack and heap at line A
 Stack: (main: empty as no assignment is made) -> (add: `v` which points to address B, `newVector` which points to address C)
 Heap: (Vector2D@<addressA>), (Vector2D@<addressB>), (Vector2D@<addressC>)
 
-### Suppose representation changed as shown
-- What changes do you need for the other parts of class Vector2D
+### c) Suppose representation changed as shown
+- i. `What changes do you need for the other parts of class Vector2D
+
 You should change getX() and getY() as well as the constructor
-- Would statement 2b above be valid
+- ii. Would statement 2b above be valid
+
 No, the statement would still not be valid as getX() and getY() are private accessors
 
 ## Question 3: Implementation of a Book class
